@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+
+
+.font-space-grotesk {
+    font-family: var(--font-space-grotesk) , 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.font-space-mono {
+ font-family: var(--font-space-mono) , 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.font-borel {
+    font-family: var(--font-borel) , 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   }
