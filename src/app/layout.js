@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Space_Grotesk, Space_Mono, Borel } from "next/font/google";
+import { Space_Grotesk, Space_Mono, Cambay, Oswald} from "next/font/google";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -13,11 +13,17 @@ const spaceMono = Space_Mono({
   weight: ["400", "700"],
 });
 
-const borel = Borel({
+const cambay = Cambay({
   subsets: ["latin"],
-  variable: "--font-borel",
+  variable: "--font-cambay",
   weight: ["400"],
 });
+
+const oswald = Oswald({
+  subsets: ["latin"],
+  variable: "--font-oswald",
+  weight: ["400"],
+})
 
 export const metadata = {
   title: "Vspcoderz Portfolio ",
@@ -33,7 +39,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`bg-zinc-900 text-zinc-100 ${spaceGrotesk.variable} ${spaceMono.variable}`}
+        className={`bg-zinc-900 text-zinc-100 ${spaceGrotesk.variable} ${spaceMono.variable} ${cambay.variable}`}
       >
         {children}
       </body>
