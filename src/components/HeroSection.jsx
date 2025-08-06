@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { WordRotate } from "@/components/ui/word-rotate";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -40,7 +41,7 @@ const HeroSection = () => {
             <div className="mt-6 mb-2">
               <WordRotate
                 className="text-lg sm:text-2xl text-gray-400 tracking-wide text-center"
-              duration={1300}
+                duration={1300}
                 words={[
                   "Full-Stack Devloper",
                   "DSA Student",
@@ -52,10 +53,10 @@ const HeroSection = () => {
             {/* Buttons */}
             <div className="flex gap-5 mt-10 flex-wrap justify-center">
               <button className="px-8 py-3 bg-white text-black text-lg rounded-full font-semibold shadow-lg hover:bg-gray-300/90 transition">
-                My Work
+                <Link href="/project">My Work</Link>
               </button>
               <button className="px-8 py-3 bg-neutral-900 text-white text-lg rounded-full font-semibold shadow border border-white/10 hover:bg-neutral-800 transition">
-                Contact
+                <Link href="/contact">Contact</Link>
               </button>
             </div>
           </main>
