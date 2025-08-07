@@ -1,6 +1,20 @@
 @import "tailwindcss";
 
-
+@theme {
+    --animate-dash-scroll: dash-scroll 1.5s linear infinite;
+  
+    @keyframes dash-scroll {
+      0% { background-position: 0 0; }
+      100% { background-position: 16px 0; }
+    }
+  }
+  
+  .infinite-dashed-border {
+    background-image: repeating-linear-gradient(to right, white 0, white 4px, transparent 4px, transparent 8px);
+    height: 2px; /* border thickness */
+    animation: var(--animate-dash-scroll);
+  }
+  
 
 .font-space-grotesk {
     font-family: var(--font-space-grotesk) , 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;

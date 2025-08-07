@@ -6,10 +6,11 @@ import Link from "next/link";
 const HeroSection = () => {
   return (
     <>
-      <section className="w-full h-screen bg-neutral-900">
-        <section className="min-h-screen w-full flex items-center bg-neutral-900">
-          <main className="w-full flex flex-col items-center justify-center pt-24 pb-16 border-y-2 border-dashed border-gray-600 ">
-            {/* Accent Graphic */}
+      <section className="w-full h-screen flex flex-col items-center justify-center bg-neutral-900 ">
+        <main className="min-h-max w-full flex flex-col items-center bg-neutral-900 ">
+          <div className="w-full infinite-dashed-border" />
+
+          <main className="w-full flex flex-col items-center justify-center pt-24 pb-16">
             <span className="rounded-2xl bg-white/10 shadow-lg p-3 flex items-center justify-center mb-8">
               <Image
                 src="/logo.png"
@@ -17,11 +18,10 @@ const HeroSection = () => {
                 width={72}
                 height={72}
                 className="h-14 w-14 object-cover rounded-2xl"
-                priority
               />
             </span>
-            {/* Bold Headline */}
-            <div className="flex flex-col items-center gap-2 ">
+
+            <div className="flex flex-col items-center gap-2">
               <h1 className="text-5xl flex items-center justify-center sm:text-7xl font-space-mono font-extrabold uppercase tracking-tight text-white text-center">
                 I am
                 <div className="flex items-center justify-center ml-8">
@@ -37,7 +37,7 @@ const HeroSection = () => {
                 </div>
               </h1>
             </div>
-            {/* Subtitle / Role */}
+
             <div className="mt-6 mb-2">
               <WordRotate
                 className="text-lg sm:text-2xl text-gray-400 tracking-wide text-center"
@@ -50,7 +50,7 @@ const HeroSection = () => {
                 ]}
               />
             </div>
-            {/* Buttons */}
+
             <div className="flex gap-5 mt-10 flex-wrap justify-center">
               <button className="px-8 py-3 bg-white text-black text-lg rounded-full font-semibold shadow-lg hover:bg-gray-300/90 transition">
                 <Link href="/project">My Work</Link>
@@ -60,11 +60,12 @@ const HeroSection = () => {
               </button>
             </div>
           </main>
-          {/* Modern Bottom Divider */}
-          <div className="w-full flex justify-center mt-16 absolute bottom-12 left-0">
-            <div className="h-2 w-32 rounded-full bg-white/10 shadow-md" />
-          </div>
-        </section>
+
+          <div className=" w-full infinite-dashed-border" />
+        </main>
+        <div className="w-full flex justify-center mt-16">
+          <div className="h-2 w-32 rounded-full bg-white/10 shadow-md" />
+        </div>
       </section>
     </>
   );
