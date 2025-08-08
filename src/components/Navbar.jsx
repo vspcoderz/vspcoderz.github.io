@@ -1,13 +1,23 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import ThaYT from "@/components/ThaYT";
 
+const navLinks = [
+  { name: "Projects", href: "/projects", arrow: false },
+  { name: "Skills", href: "/skills", arrow: false },
+  { name: "About", href: "/about", arrow: false },
+  { name: "Contact", href: "/contact", arrow: true },
+];
+
 const Navbar = () => {
   return (
-    <nav className="fixed w-full top-4 flex justify-center items-center ">
-      <main className="bg-zinc-950/80 rounded-full shadow-lg py-3 justify-around w-6xl flex flex-row gap-5 items-center ">
-        <div>
-          <span className="rounded-2xl  px-4 font-space-mono font-bold text-lg flex items-center justify-center">
+    <nav className="fixed w-full top-4 flex justify-center items-center z-50 px-4">
+      <main className="bg-zinc-950/80 rounded-full shadow-lg py-3 flex items-center justify-between w-full max-w-6xl px-5">
+        {/* Logo + Brand */}
+        <div className="w-full flex justify-center md:justify-start">
+          <span className="rounded-2xl px-4 font-space-mono font-bold text-lg flex items-center">
             <Image
               src="/logo.png"
               alt="Hero Logo"
@@ -18,11 +28,18 @@ const Navbar = () => {
             Vspcoderz
           </span>
         </div>
-        <div className="flex flex-row gap-3 justify-around">
-            <ThaYT name="Projects" href="/projects" arrow={false} className="mr-2"    />
-            <ThaYT name="Skill" href="/skills" arrow={false}  className="mr-2"    />
-            <ThaYT name="About Me" href="/about" arrow={false}  className="mr-2"    />
-            <ThaYT name="Contact Me" href="/contact" arrow={true} className="mr-2"    />
+
+        {/* Navigation Links - visible only on md and larger */}
+        <div className="hidden md:flex flex-row gap-3 justify-around items-center">
+          {navLinks.map(({ name, href, arrow }) => (
+            <ThaYT
+              key={name}
+              name={name}
+              href={href}
+              arrow={arrow}
+              className="mr-3"
+            />
+          ))}
         </div>
       </main>
     </nav>

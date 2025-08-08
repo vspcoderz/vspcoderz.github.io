@@ -1,5 +1,6 @@
+import SmoothScrolling from "@/components/SmoothScrolling";
 import "./globals.css";
-import { Space_Grotesk, Space_Mono, Cambay, Oswald} from "next/font/google";
+import { Space_Grotesk, Space_Mono, Cambay, Oswald } from "next/font/google";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -23,7 +24,7 @@ const oswald = Oswald({
   subsets: ["latin"],
   variable: "--font-oswald",
   weight: ["400"],
-})
+});
 
 export const metadata = {
   title: "Vspcoderz Portfolio ",
@@ -41,7 +42,7 @@ export default function RootLayout({ children }) {
       <body
         className={`bg-zinc-900 text-zinc-100 ${spaceGrotesk.variable} ${spaceMono.variable} ${cambay.variable}`}
       >
-        {children}
+        <SmoothScrolling>{children}</SmoothScrolling>
       </body>
     </html>
   );
