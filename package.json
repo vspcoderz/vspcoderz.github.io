@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@faker-js/faker": "^10.0.0",
     "@gsap/react": "^2.1.2",
     "@studio-freight/lenis": "^1.0.42",
     "clsx": "^2.1.1",

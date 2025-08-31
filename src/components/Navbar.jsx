@@ -15,7 +15,6 @@ const Navbar = () => {
   return (
     <nav className="fixed w-full top-4 flex justify-center items-center z-50 px-4">
       <main className="bg-zinc-950/80 rounded-full shadow-lg py-3 flex items-center justify-between w-full max-w-6xl px-5">
-        {/* Logo + Brand */}
         <div className="w-full flex justify-center md:justify-start">
           <span className="rounded-2xl px-4 font-space-mono font-bold text-lg flex items-center">
             <Image

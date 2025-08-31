@@ -42,6 +42,7 @@ const HeroSection = () => {
               className="text-base sm:text-xl md:text-2xl text-gray-400 tracking-wide text-center"
               duration={1300}
               words={[
+                "Freelancer Developer",
                 "Full-Stack Developer",
                 "DSA Student",
                 "Minecraft Modder",

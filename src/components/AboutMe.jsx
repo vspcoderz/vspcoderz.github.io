@@ -26,14 +26,17 @@ const AboutMe = () => {
               (Vspcoderz)
             </span>
             <p className="text-xs md:text-sm py-4 px-1 md:px-2 leading-relaxed">
-              I Like Coding, Playing Games, Building Projects In Free Time, Chat
-              With Friends, Learn New Things, Explore New Tech Fields And Some
-              Other Things. I am Friendly In Nature My Friend Is ThaYT He Is
-              Great, I Meet Discord & Minecraft At 2023 Then In 2024 Started
-              Coding I Was Not Even Coding In That Time I Was Making Code With
-              AI Then I meet Crater And Started TO Learn Code From Youtube Now I
-              am Full Stack Coder Learning Java, DSA And Minecraft Modding (I
-              Love Minecraft){" "}
+              I’m a friendly, curious developer who likes coding, playing games,
+              building projects, and chatting with friends. I enjoy learning new
+              things and trying out new tech. I found Discord and Minecraft in
+              2023, which got me into tech. In 2024, I started coding. At first,
+              I used AI to help me experiment, but then I began learning from
+              YouTube and other resources. Now I’m a full‑stack learner focused
+              on Java, DSA, and Minecraft modding (I love Minecraft). I use AI
+              as a helper—for ideas, quick prototypes, code reviews, and
+              debugging—but I write the main code myself. This way, my projects
+              are clear, reliable, and built by me. I like learning by doing and
+              turning ideas into real projects.
             </p>
           </main>
           <div className="flex gap-2 mt-auto">
