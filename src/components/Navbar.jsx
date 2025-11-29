@@ -2,46 +2,24 @@
 
 import Image from "next/image";
 import React from "react";
-import ThaYT from "@/components/ThaYT";
+import NavLink from "@/components/NavLink";
 
-const navLinks = [
-  { name: "Projects", href: "/projects", arrow: false },
-  { name: "Skills", href: "/skills", arrow: false },
-  { name: "About", href: "/about", arrow: false },
-  { name: "Contact", href: "/contact", arrow: true },
-];
+
 
 const Navbar = () => {
   return (
-    <nav className="fixed w-full top-4 flex justify-center items-center z-50 px-4">
-      <main className="bg-zinc-950/80 rounded-full shadow-lg py-3 flex items-center justify-between w-full max-w-6xl px-5">
-        <div className="w-full flex justify-center md:justify-start">
-          <span className="rounded-2xl px-4 font-space-mono font-bold text-lg flex items-center">
-            <Image
-              src="/logo.png"
-              alt="Hero Logo"
-              width={72}
-              height={72}
-              className="h-14 w-14 object-cover rounded-2xl mr-2"
-            />
-            Vspcoderz
-          </span>
+      <nav className="sticky top-0 max-h-18 w-full flex gpa-4 justify-between font-space-grotesk p-4 ">
+        <div className="flex gap-4 items-center">
+          <h1 className="font-space-mono text-2xl uppercase font-bold ml-4">Zenodev</h1>
         </div>
+        <div className="flex gap-4 items-center">
+          <NavLink href="#about">About Me</NavLink>
+          <NavLink href="#projects">My Projects </NavLink>
+          <NavLink href="#clients">Testomials</NavLink>
+          <NavLink href="myass" >Contact Me</NavLink>
 
-        {/* Navigation Links - visible only on md and larger */}
-        <div className="hidden md:flex flex-row gap-3 justify-around items-center">
-          {navLinks.map(({ name, href, arrow }) => (
-            <ThaYT
-              key={name}
-              name={name}
-              href={href}
-              arrow={arrow}
-              className="mr-3"
-            />
-          ))}
         </div>
-      </main>
-    </nav>
+      </nav>
   );
 };
 

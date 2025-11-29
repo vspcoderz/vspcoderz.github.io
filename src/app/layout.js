@@ -1,6 +1,15 @@
 import SmoothScrolling from "@/components/SmoothScrolling";
 import "./globals.css";
-import { Space_Grotesk, Space_Mono, Cambay, Oswald } from "next/font/google";
+import { Space_Grotesk, Space_Mono, Cambay, Oswald, Anton_SC, Anton } from "next/font/google";
+
+
+
+
+const anton = Anton({
+  subsets: ["latin"],
+  variable: "--font-anton",
+  weight: ["400"]
+})
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -40,7 +49,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`bg-zinc-900 text-zinc-100 ${spaceGrotesk.variable} ${spaceMono.variable} ${cambay.variable}`}
+        className={`bg-zinc-900 text-zinc-100 ${anton.variable} ${spaceGrotesk.variable} ${spaceMono.variable} ${cambay.variable}`}
       >
         <SmoothScrolling>{children}</SmoothScrolling>
       </body>

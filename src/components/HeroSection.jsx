@@ -2,11 +2,13 @@ import Image from "next/image";
 import React from "react";
 import { WordRotate } from "@/components/ui/word-rotate";
 import Link from "next/link";
+import LinkButton from "./LinkButton";
+
 
 const HeroSection = () => {
   return (
-    <section className="w-full min-h-screen flex flex-col items-center justify-center bg-neutral-900 px-4 sm:px-8">
-      <main className="w-full max-w-7xl flex flex-col items-center bg-neutral-900">
+    <section className="w-full min-h-screen flex  bg-neutral-950 p-2 sm:px-8">
+      {/* <main className="w-full max-w-7xl flex flex-col items-center bg-neutral-900">
         <div className="w-full infinite-dashed-border" />
 
         <main className="w-full flex flex-col items-center justify-center pt-16 sm:pt-24 pb-12 sm:pb-16 px-2 sm:px-0 max-w-4xl mx-auto">
@@ -71,10 +73,8 @@ const HeroSection = () => {
         </main>
 
         <div className="w-full infinite-dashed-border mt-6 sm:mt-8" />
-      </main>
-      <div className="w-full flex justify-center mt-12 sm:mt-16 px-4">
-        <div className="h-2 w-24 sm:w-32 rounded-full bg-white/10 shadow-md" />
-      </div>
+      </main> */}
+
     </section>
   );
 };
