@@ -51,7 +51,11 @@ export default function RootLayout({ children }) {
       <body
         className={`bg-zinc-900 text-zinc-100 ${anton.variable} ${spaceGrotesk.variable} ${spaceMono.variable} ${cambay.variable}`}
       >
-        <SmoothScrolling>{children}</SmoothScrolling>
+        <SmoothScrolling>
+          <div className="flex min-h-screen">
+            {children}
+          </div>
+        </SmoothScrolling>
       </body>
     </html>
   );

@@ -25,7 +25,6 @@ const toolsData = [
   { alt: "Bootstrap", src: "/skills/bootstrap.svg" },
 ];
 
-// Helper to display stars:
 const Stars = ({ rating }) => {
   const fullStars = Math.floor(rating);
   const halfStar = rating - fullStars >= 0.5;
@@ -35,7 +34,6 @@ const Stars = ({ rating }) => {
     <div className="flex space-x-1">
       {[...Array(totalStars)].map((_, i) => {
         if (i < fullStars) {
-          // full star
           return (
             <svg
               key={i}
@@ -48,7 +46,6 @@ const Stars = ({ rating }) => {
             </svg>
           );
         } else if (i === fullStars && halfStar) {
-          // half star
           return (
             <svg
               key={i}
@@ -70,7 +67,6 @@ const Stars = ({ rating }) => {
             </svg>
           );
         } else {
-          // empty star
           return (
             <svg
               key={i}
@@ -114,12 +110,10 @@ const Skills = () => {
             {skillsData.map(({ name, src, rating }) => (
               <div key={name} className="perspective flip-card cursor-pointer min-w-36">
                 <div className="flip-inner">
-                  {/* Front Side */}
                   <div className="flip-front">
                     <Image src={src} height={32} width={32} alt={name} />
                     <span className="mt-1 text-base">{name}</span>
                   </div>
-                  {/* Back Side */}
                   <div className="flip-back">
                     <Stars rating={rating} />
                   </div>
