@@ -1,32 +1,17 @@
-import Link from 'next/link'
-import React from 'react'
-
-
-const Path = (props) => {
-    return (
-        <Link className={`hover:text-blue-400 cursor-pointer ${props.className}`} href={props.href}>
-            <span className="bg-zinc-700 rounded-md p-['1px'] w-min text-zinc-300">
-
-                {props.href}
-            </span>
-
-            ({props.name}) </Link>
-
-    )
+export default function RoutesPage() {
+  return (
+    <main className="flex min-h-screen items-center justify-center bg-neutral-950 px-6 py-16 text-neutral-100">
+      <section className="w-full max-w-3xl rounded-3xl border border-white/10 bg-white/5 px-8 py-12 text-center shadow-2xl shadow-black/30 backdrop-blur">
+        <p className="text-sm font-semibold uppercase tracking-[0.35em] text-neutral-400">
+          Vspcoderz
+        </p>
+        <h1 className="mt-6 text-4xl font-bold tracking-tight text-white sm:text-6xl">
+          Site under construction
+        </h1>
+        <p className="mt-6 text-base leading-7 text-neutral-300 sm:text-lg">
+          This section is unavailable while the site is being rebuilt.
+        </p>
+      </section>
+    </main>
+  );
 }
-
-const page = () => {
-    return (
-        <div className='bg-zinc-200 text-zinc-900 min-h-screen w-full font-space-mono p-16'>
-            <h1 className='text-lg sm:text-2xl md:text-4xl text-center'>Some Project / Tools</h1>
-            <pre>
-                <Path href="/" name="Portfolio" />
-                <br />
-                <Path href="/api/user" className="pl-4" name="Fake User" />
-
-            </pre>
-        </div>
-    )
-}
-
-export default page
