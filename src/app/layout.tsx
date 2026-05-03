@@ -1,18 +1,16 @@
 import type { Metadata } from "next";
-import { Manrope, Inter } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 import { cn } from "@/lib/utils";
 
-const inter = Inter({subsets:['latin'],variable:'--font-sans'});
-
-const manrope = Manrope({
-  variable: "--font-manrope",
+const jetbrains = JetBrains_Mono({
+  variable: "--font-jetbrains",
 });
 
 export const metadata: Metadata = {
-  title: "Vspcoderz",
-  description: "Hello World.",
+  title: "vspcoderz | Full Stack Developer",
+  description:
+    "Portfolio of vspcoderz, a full stack developer focused on backend, DevOps, and system design.",
 };
 
 export default function RootLayout({
@@ -21,10 +19,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("h-full", "antialiased", manrope.variable, "font-sans", inter.variable)}>
-      <body className="font-datatype">
-        <Navbar />
-        <div className="">{children}</div>
+    <html
+      lang="en"
+      className={cn(
+        "h-full scroll-smooth",
+        "antialiased",
+        "font-sans",
+        jetbrains.className
+      )}
+    >
+      <body className="">
+        <div>{children}</div>
       </body>
     </html>
   );
